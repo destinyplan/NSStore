@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="NutstoreClient.Controls.SilderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NutstoreClient.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <Grid Background="White" MinWidth="250" MinHeight="250" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Button x:Name="btn_tips_pre" Margin="20,0,0,0" Click="Button_Click_pre" Style="{StaticResource ResourceKey=RoundedButton}" >
+                <Button.Background>
+                    <ImageBrush ImageSource="../Assets/Icon/icon_welcomewizard_pre.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid Grid.Column="2">
+            <Button x:Name="btn_tips_next" Margin="0,0,20,0" Click="Button_Click_next" Style="{StaticResource ResourceKey=RoundedButton}" >
+                <Button.Background>
+                    <ImageBrush ImageSource="../Assets/Icon/icon_welcomewizard_next.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="16"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="6"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="Image_Tips_1" Grid.Row="1" Source="../Assets/Pic/Pic_WelcomeWizard_1_1.png" />
+            <Image x:Name="Image_Tips_2" Grid.Row="3" Source="../Assets/Pic/Pic_WelcomeWizard_1_2.png" />
+            <StackPanel Grid.Row="5" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Ellipse x:Name="tips_mark_1" Width="8" Height="8" Margin="2,0,2,0" Fill="Black" Stroke="Black" StrokeThickness="0.5" />
+                <Ellipse x:Name="tips_mark_2" Width="8" Height="8" Margin="2,0,2,0" Fill="Wheat" Stroke="Black" StrokeThickness="0.5" />
+                <Ellipse x:Name="tips_mark_3" Width="8" Height="8" Margin="2,0,2,0" Fill="Wheat" Stroke="Black" StrokeThickness="0.5" />
+                <Ellipse x:Name="tips_mark_4" Width="8" Height="8" Margin="2,0,2,0" Fill="Wheat" Stroke="Black" StrokeThickness="0.5" />
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</UserControl>
